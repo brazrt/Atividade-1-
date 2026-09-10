@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    // Declaração e atribuição das variáveis
+    char nome[50] = "Ana";
+    int idade = 25;
+    float altura = 1.68;
+    bool possuiCNH = true;
+
+    // Exibição formatada no console
+    printf("Nome: %s, Idade: %d, Altura: %.2fm, CNH: %s\n",
+           nome, idade, altura, possuiCNH ? "true" : "false");
+
+    return 0;
+}
