@@ -1,0 +1,24 @@
+using System;
+using System.Globalization;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Digite a nota do aluno (0 a 10): ");
+        double nota = double.Parse(Console.ReadLine().Replace(',', '.'), CultureInfo.InvariantCulture);
+
+        if (nota >= 7.0)
+        {
+            Console.WriteLine("Aprovado");
+        }
+        else if (nota >= 5.0)
+        {
+            Console.WriteLine("Recuperação");
+        }
+        else
+        {
+            Console.WriteLine("Reprovado");
+        }
+    }
+}
