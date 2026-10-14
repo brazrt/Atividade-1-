@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int numeroSecreto = 42;
+        int palpite;
+
+        do
+        {
+            Console.WriteLine("Tente adivinhar o número secreto: ");
+            palpite = int.Parse(Console.ReadLine());
+
+            if (palpite < numeroSecreto)
+            {
+                Console.WriteLine("Muito baixo! Tente novamente.");
+            }
+            else if (palpite > numeroSecreto)
+            {
+                Console.WriteLine("Muito alto! Tente novamente.");
+            }
+        } while (palpite != numeroSecreto);
+
+        Console.WriteLine("Parabéns! Você acertou o número!");
+    }
+}
