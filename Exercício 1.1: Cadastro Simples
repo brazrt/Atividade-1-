@@ -1,0 +1,14 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string nome = "Ana";
+        int idade = 25;
+        double altura = 1.68;
+        bool possuiCNH = true;
+
+        Console.WriteLine($"Nome: {nome}, Idade: {idade}, Altura: {altura:F2}m, CNH: {possuiCNH.ToString().ToLower()}");
+    }
+}
