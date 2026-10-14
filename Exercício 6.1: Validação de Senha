@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string senhaCorreta = "1234";
+
+        Console.WriteLine("Digite a senha: ");
+        string senha = Console.ReadLine();
+
+        while (senha != senhaCorreta)
+        {
+            Console.WriteLine("Senha incorreta! Tente novamente: ");
+            senha = Console.ReadLine();
+        }
+
+        Console.WriteLine("Senha correta! Acesso liberado.");
+    }
+}
