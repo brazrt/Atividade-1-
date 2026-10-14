@@ -1,0 +1,47 @@
+using System;
+using System.Globalization;
+
+class Program
+{
+    static void Main()
+    {
+        double saldo = 0;
+        int opcao;
+
+        do
+        {
+            Console.WriteLine("===== MENU =====");
+            Console.WriteLine("1 - Ver Saldo");
+            Console.WriteLine("2 - Fazer Depósito");
+            Console.WriteLine("3 - Sair");
+            Console.WriteLine("Escolha uma opção: ");
+            opcao = int.Parse(Console.ReadLine());
+
+            switch (opcao)
+            {
+                case 1:
+                    Console.WriteLine($"Saldo atual: R$ {saldo.ToString("F2", CultureInfo.InvariantCulture)}");
+                    break;
+                case 2:
+                    Console.WriteLine("Valor do depósito: ");
+                    double deposito = double.Parse(Console.ReadLine().Replace(',', '.'), CultureInfo.InvariantCulture);
+                    if (deposito > 0)
+                    {
+                        saldo += deposito;
+                        Console.WriteLine("Depósito realizado com sucesso!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Valor inválido para depósito.");
+                    }
+                    break;
+                case 3:
+                    Console.WriteLine("Encerrando o programa. Até logo!");
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida!");
+                    break;
+            }
+        } while (opcao != 3);
+    }
+}
