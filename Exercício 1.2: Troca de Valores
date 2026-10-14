@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int A = 5;
+        int B = 10;
+
+        Console.WriteLine($"Antes: A = {A}, B = {B}");
+
+        int temp = A;  // guarda o valor de A (5)
+        A = B;         // A recebe o valor de B (10)
+        B = temp;      
+
+        Console.WriteLine($"Depois: A = {A}, B = {B}");
+    }
+}
