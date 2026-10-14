@@ -1,0 +1,43 @@
+using System;
+using System.Globalization;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Primeiro número: ");
+        double a = double.Parse(Console.ReadLine().Replace(',', '.'), CultureInfo.InvariantCulture);
+
+        Console.WriteLine("Segundo número: ");
+        double b = double.Parse(Console.ReadLine().Replace(',', '.'), CultureInfo.InvariantCulture);
+
+        Console.WriteLine("Operação (+, -, *, /): ");
+        char operacao = Console.ReadLine()[0];
+
+        switch (operacao)
+        {
+            case '+':
+                Console.WriteLine($"Resultado: {(a + b).ToString(CultureInfo.InvariantCulture)}");
+                break;
+            case '-':
+                Console.WriteLine($"Resultado: {(a - b).ToString(CultureInfo.InvariantCulture)}");
+                break;
+            case '*':
+                Console.WriteLine($"Resultado: {(a * b).ToString(CultureInfo.InvariantCulture)}");
+                break;
+            case '/':
+                if (b == 0)
+                {
+                    Console.WriteLine("Erro: divisão por zero!");
+                }
+                else
+                {
+                    Console.WriteLine($"Resultado: {(a / b).ToString(CultureInfo.InvariantCulture)}");
+                }
+                break;
+            default:
+                Console.WriteLine("Operação inválida!");
+                break;
+        }
+    }
+}
